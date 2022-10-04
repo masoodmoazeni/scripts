@@ -27,6 +27,8 @@ sudo apt install docker.io -y
 sudo apt install docker-compose -y
 
 echo "Install complete.
+---------------------
+"
 
 docker --version
 docker-compose --version
