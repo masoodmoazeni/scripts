@@ -23,7 +23,10 @@ sudo rm /etc/apt/sources.list
 sudo cp ~/solution/sources.list /etc/apt/sources.list
 sudo mv /etc/apt/sources.list.d/* ~/solution
 sudo apt update
-sudo apt install docker.io
-sudo apt install docker-compose
+sudo apt install docker.io -y
+sudo apt install docker-compose -y
+
+echo "Install complete.
+
 docker --version
 docker-compose --version
