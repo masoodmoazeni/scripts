@@ -2,9 +2,10 @@ VERSION="1.0.1"
 
 #install minikube
 wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-mv minikube-linux-amd64 /usr/local/bin/minikube
+cp minikube-linux-amd64 /usr/local/bin/minikube
 chmod 755 /usr/local/bin/minikube
 minikube version -o json
+rm -rf minikube-linux-amd64
 
 #install kubectl
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
