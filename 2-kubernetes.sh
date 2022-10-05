@@ -1,5 +1,8 @@
 VERSION="1.0.1"
 
+#update and upgrade ubuntu and install docker
+sh 1-install.sh
+
 #install minikube
 wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 cp minikube-linux-amd64 /usr/local/bin/minikube
