@@ -1,4 +1,4 @@
-VERSION="1.0.1"
+VERSION="1.0.2"
 
 #update and upgrade ubuntu and install docker
 sh 1-install.sh
@@ -8,7 +8,6 @@ wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd6
 cp minikube-linux-amd64 /usr/local/bin/minikube
 chmod 755 /usr/local/bin/minikube
 minikube version -o json
-rm -rf minikube-linux-amd64
 
 #install kubectl
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
@@ -37,6 +36,11 @@ systemctl enable --now cri-docker.socket
 #install cri-tools
 wget https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.25.0/crictl-v1.25.0-linux-amd64.tar.gz
 tar zxvf crictl-v1.25.0-linux-amd64.tar.gz -C /usr/local/bin
+
+#remove download files
+rm -rf cri-dockerd-v0.2.0-linux-amd64.tar.gz
+rm -rf crictl-v1.25.0-linux-amd64.tar.gz
+rm -rf minikube-linux-amd64
 
 echo "
 Install complete.
