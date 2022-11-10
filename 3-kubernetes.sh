@@ -11,3 +11,11 @@ apt-get update
 apt-get install -y kubelet kubectl kubeadm kubernetes-cni
 swapoff -a
 kubeadm init
+
+
+and copy&past this command
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
