@@ -9,5 +9,5 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
 apt-get install -y kubelet kubectl kubeadm kubernetes-cni
-swappof -a
+swapoff -a
 kubeadm init
